@@ -14,6 +14,16 @@
         <span th:text="${success}"></span>
     </div>
 </div>
+
+<div>
+    <form method="get" action="/product/search" th:object="${products}">
+
+        <input type="text" name="search" placeholder="Input the name you want to search: "/>
+        <button type="submit" value="search"> Search</button>
+
+    </form>
+</div>
+
 <table id="products">
     <thead>
     <tr>
@@ -36,6 +46,7 @@
         <td><a th:href="@{/product/{id}/view(id=${row.getProductId()})}">view</a></td>
     </tr>
     </tbody>
+
 </table>
 <footer th:replace="/layout :: footer"></footer>
 </body>
