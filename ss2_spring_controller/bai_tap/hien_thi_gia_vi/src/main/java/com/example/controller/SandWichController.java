@@ -13,8 +13,8 @@ public class SandWichController {
     }
 
     @GetMapping("/save")
-    public String showList(@RequestParam(defaultValue = "") String[] giaVi, Model model) {
-        model.addAttribute("giaVi", giaVi);
+    public String showList(@RequestParam(defaultValue = "") String[] condiment, Model model) {
+        model.addAttribute("condiment", condiment);
         return "index";
     }
 }

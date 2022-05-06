@@ -6,18 +6,30 @@ import org.springframework.stereotype.Service;
 @Service
 public class CalculatorServiceImpl implements ICalculatorService {
     @Override
-    public int calculate(Integer num1, Integer num2, String operator) {
+    public String calculate(Integer num1, Integer num2, String operator) {
         System.out.println(operator);
+        String result = null;
         switch (operator) {
             case "Addition(+)":
-                return num1 + num2;
+                result = String.valueOf(num1 + num2);
+                break;
             case "Subtraction(-)":
-                return num1 - num2;
+                result = String.valueOf(num1 - num2);
+                break;
             case "Multiplication(*)":
-                return num1 * num2;
+                result = String.valueOf(num1 * num2);
+                break;
             case "Division(/)":
-                return num1 / num2;
+                try {
+                    result = String.valueOf(num1 / num2);
+
+                } catch (Exception e) {
+                    result = "Cant divisise a number to 0";
+                }
+                break;
+
         }
-        return 0;
+        return result;
     }
+
 }

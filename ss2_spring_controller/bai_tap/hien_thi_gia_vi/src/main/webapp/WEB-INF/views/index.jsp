@@ -14,14 +14,14 @@
 <body>
 <form action="/save">
     <h1>Sandwich Condiments</h1>
-    <input type="checkbox" name="giaVi" value="Lettuce"> Lettuce
-    <input type="checkbox" name="giaVi" value="Tomato"> Tomato
-    <input type="checkbox" name="giaVi" value="Mustard"> Mustard
-    <input type="checkbox" name="giaVi" value="Sprouts"> Sprouts
+    <input type="checkbox" name="condiment" value="Lettuce"> Lettuce
+    <input type="checkbox" name="condiment" value="Tomato"> Tomato
+    <input type="checkbox" name="condiment" value="Mustard"> Mustard
+    <input type="checkbox" name="condiment" value="Sprouts"> Sprouts
     <button type="submit">Save</button>
 </form>
 
-<div><c:forEach var="element" items="${giaVi}">
+<div><c:forEach var="element" items="${condiment}">
     ${element}
 </c:forEach></div>
 </body>

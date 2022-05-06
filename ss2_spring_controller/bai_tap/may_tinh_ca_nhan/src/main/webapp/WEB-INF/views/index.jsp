@@ -21,7 +21,7 @@
         <input type="submit" name="operator" value="Addition(+)">
         <input type="submit" name="operator" value="Subtraction(-)">
         <input type="submit" name="operator" value="Multiplication(*)">
-        <input type="submit" name="operator" value="Division(-)">
+        <input type="submit" name="operator" value="Division(/)">
     </div>
 </form>
 <div>

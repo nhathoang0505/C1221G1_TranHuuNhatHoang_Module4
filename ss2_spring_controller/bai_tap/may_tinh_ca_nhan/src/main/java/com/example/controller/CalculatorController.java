@@ -12,7 +12,7 @@ public class CalculatorController {
     @Autowired
     ICalculatorService calculatorService;
 
-    @GetMapping("/homepage")
+    @GetMapping("/")
     public String goHomePage() {
         return "index";
     }
@@ -20,7 +20,7 @@ public class CalculatorController {
     @GetMapping("/calculator")
     public String calculate(@RequestParam(defaultValue = "") Integer number1, @RequestParam(defaultValue = "") Integer number2,
                             @RequestParam String operator, Model model) {
-        Integer result = calculatorService.calculate(number1, number2, operator);
+        String result = calculatorService.calculate(number1, number2, operator);
         model.addAttribute("result", result);
         return "index";
     }
